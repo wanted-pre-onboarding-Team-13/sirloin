@@ -1,0 +1,21 @@
+.addit-product {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .addit-input-container {
+    .input-addit-name {
+      width: 300px;
+      margin: 0 10px;
+      padding: 10px 10px;
+    }
+  }
+  .addit-delete-btn {
+    width: 50px;
+    padding: 10px 10px;
+    color: red;
+    border-radius: 5px;
+    border: 1px solid red;
+    background-color: #fff;
+    cursor: pointer;
+  }
+}
