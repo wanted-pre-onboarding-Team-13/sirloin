@@ -4,15 +4,11 @@ import "utils/styles/ImageUpload.scss";
 const ImageUpload = ({ title }) => {
   const [selectedFile, setSelectedFile] = useState([]);
 
-  //input: display none하고 btn에서 대신 input onchage실행
   const fileInput = useRef();
 
   const fileSelectedHandler = (e) => {
     const fileName = e.target.files[0].name;
-    window.localStorage.setItem(
-      JSON.stringify(fileName),
-      JSON.stringify(fileName)
-    );
+    window.localStorage.setItem(fileName, fileName);
     const addImg = () => {
       let imageArr = [...selectedFile];
       imageArr.unshift(fileName);
@@ -23,11 +19,12 @@ const ImageUpload = ({ title }) => {
 
   const addImgBtn = (e) => {
     e.preventDefault();
-    fileInput.current.click(); //onchange아니고 click!!!!
+    fileInput.current.click();
   };
 
   const removeImgBtn = (e) => {
     setSelectedFile(selectedFile.filter((name) => name !== e));
+    window.localStorage.removeItem(e);
   };
 
   return (
