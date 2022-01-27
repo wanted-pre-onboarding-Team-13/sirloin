@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import "utils/styles/ImageUpload.scss";
 
-const ImageUpload = () => {
+const ImageUpload = ({ title }) => {
   const [selectedFile, setSelectedFile] = useState([]);
 
   //input: display none하고 btn에서 대신 input onchage실행
@@ -33,7 +33,7 @@ const ImageUpload = () => {
   return (
     <div className="container">
       <div className="title">
-        <h2>상품 소개 이미지</h2>
+        <h2>{title} 이미지</h2>
       </div>
       <div className="imgAddContainer">
         <input
@@ -42,16 +42,25 @@ const ImageUpload = () => {
           onChange={fileSelectedHandler}
           ref={fileInput}
         />
-        <button onClick={addImgBtn}>버튼</button>
-        {selectedFile !== "" &&
-          selectedFile.map((name, i) => {
-            return (
-              <div key={name} className="imgName">
-                {name}
-                <button onClick={() => removeImgBtn(name)}>x</button>
-              </div>
-            );
-          })}
+        <button onClick={addImgBtn} className="imageAddBtn">
+          +&nbsp;이미지추가
+        </button>
+        <div className="imgNameContainer">
+          {selectedFile !== "" &&
+            selectedFile.map((name, i) => {
+              return (
+                <div key={name} className="imgName">
+                  {name}
+                  <button
+                    className="deleteBtn"
+                    onClick={() => removeImgBtn(name)}
+                  >
+                    x
+                  </button>
+                </div>
+              );
+            })}
+        </div>
       </div>
     </div>
   );
