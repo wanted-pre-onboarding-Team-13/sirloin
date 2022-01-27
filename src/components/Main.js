@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Menulist from './Menulist';
+import Durationconfig from './Durationconfig';
 import 'utils/styles/Main.scss';
 
 function Main() {
@@ -21,9 +22,7 @@ function Main() {
         </div>
       </div>
       <div className='sirloin-form'>
-        <div className='test'></div>
-        <div className='test'></div>
-        <div className='test'></div>
+        <Durationconfig />
         <div className='test'></div>
       </div>
     </div>
