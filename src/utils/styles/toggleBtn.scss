@@ -1,0 +1,48 @@
+$color_checkbox_toggled: #322a77;
+$color_checkbox_default: #8e8e93;
+$bgcolor_checkbox_toggled: #a188b9;
+$bgcolor_checkbox_default: #8d8c8c;
+$shadow: 0 1px 1px rgba(gray, 0.4), 0 1px 1px rgba(gray, 0.4);
+$transition: 0.2s;
+$width: 3em;
+$height: $width/3;
+
+html {
+  box-sizing: border-box;
+}
+
+.toggle {
+  .toggle-control {
+    transition: $transition;
+    width: $width;
+    height: $height;
+    display: block;
+    border-radius: $height;
+    background-color: $bgcolor_checkbox_default;
+    position: relative;
+    &:after {
+      transition: $transition;
+      content: '';
+      width: $width/2;
+      height: $width/2;
+      display: block;
+      background-color: #fff;
+      border-radius: 50%;
+      box-shadow: $shadow;
+      position: absolute;
+      top: -4px;
+      left: 0;
+    }
+  }
+
+  input {
+    display: none;
+    &:checked + .toggle-control {
+      background-color: $bgcolor_checkbox_toggled;
+      &:after {
+        background-color: $color_checkbox_toggled;
+        left: $width/2;
+      }
+    }
+  }
+}
