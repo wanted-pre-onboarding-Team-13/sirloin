@@ -1,7 +1,8 @@
-import 'utils/styles/App.scss';
+import "utils/styles/App.scss";
+import { ImageUpload } from "component/ImageUpload";
 
 function App() {
-  return <div>test</div>;
+  return <ImageUpload />;
 }
 
 export default App;

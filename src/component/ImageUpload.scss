@@ -1,0 +1,16 @@
+.container {
+  margin: 20px auto;
+  background-color: lightgray;
+  width: 70vw;
+  height: 250px;
+
+  .title {
+    height: 50px;
+    border-bottom: 1px solid #454545;
+    line-height: 50px;
+  }
+
+  .imageAdd {
+    padding: 10px 25px;
+  }
+}
