@@ -9,18 +9,24 @@ export const ImageUpload = () => {
   const fileInput = useRef();
 
   const fileSelectedHandler = (e) => {
-    setSelectedFile(e.target.files[0]);
+    const fileName = e.target.files[0].name;
     window.localStorage.setItem(
-      JSON.stringify(e.target.files[0].name),
-      JSON.stringify(e.target.files[0].name)
+      JSON.stringify(fileName),
+      JSON.stringify(fileName)
     );
+    const imageAdd = () => {
+      let imageArr = [...selectedFile];
+      imageArr.unshift(fileName);
+      setSelectedFile(imageArr);
+    };
+    imageAdd();
   };
 
   const handleFileBtn = (e) => {
     e.preventDefault();
     fileInput.current.click(); //onchange아니고 click!!!!
   };
-
+  console.log(selectedFile);
   return (
     <div className="container">
       <div className="title">
@@ -34,7 +40,13 @@ export const ImageUpload = () => {
           ref={fileInput}
         />
         <button onClick={handleFileBtn}>버튼</button>
-        <div className="imgName">{selectedFile.name}</div>
+        {selectedFile !== "" &&
+          selectedFile.map((name) => (
+            <div key={name} className="imgName">
+              {name}
+              <button>x</button>
+            </div>
+          ))}
       </div>
     </div>
   );
