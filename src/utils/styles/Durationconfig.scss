@@ -1,0 +1,38 @@
+$innerBorder: 1px solid lightgray;
+$outerBorder: 2px solid lightgray;
+@mixin font-bold {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.duration-config-container {
+  border: $outerBorder;
+}
+.duration-config-title {
+  @include font-bold();
+  padding: 5px 10px 5px;
+  border-bottom: $innerBorder;
+}
+.duration-config {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr 1fr;
+
+  .duration-title {
+    background-color: rgb(245, 240, 240);
+    padding: 10px;
+    font-weight: bold;
+    border-right: $innerBorder;
+  }
+  .duration-title:nth-child(1) {
+    border-bottom: $innerBorder;
+  }
+
+  .duration-config-detail {
+    padding: 10px;
+  }
+
+  .duration-config-detail:nth-child(2) {
+    border-bottom: $innerBorder;
+  }
+}
