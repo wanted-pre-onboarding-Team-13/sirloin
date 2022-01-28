@@ -1,15 +1,21 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-import ItemLayout from './components/ItemOptionLayout.js';
+import ItemOptionLayout from './components/ItemOptionLayout.js';
 import 'utils/styles/PartThree.scss';
 import 'utils/styles/ItemOptionLayout.scss';
 
 const PartThree = () => {
   const [layoutInventory, setLayoutInventory] = useState([]);
+  const [removeLayout, setRemoveLayout] = useState([]);
 
   const addOptionSet = () => {
-    setLayoutInventory(layoutInventory.concat(<ItemLayout key={layoutInventory.length} />));
-    console.log(layoutInventory.length);
+    setLayoutInventory(layoutInventory.concat(<ItemOptionLayout key={layoutInventory.length} layoutInventory={layoutInventory} length={layoutInventory.length} />));
+  };
+
+  const myRef = useRef(null);
+
+  const removeOptionSet = (e) => {
+    setLayoutInventory(layoutInventory.splice(0, e.target.id));
   };
   return (
     <>
@@ -23,7 +29,12 @@ const PartThree = () => {
           </div>
           <ul>
             {layoutInventory.map((el, index) => (
-              <li key={index}>{el}</li>
+              <li key={index} id={index} ref={myRef}>
+                <button className="delete-btn" id={index} onClick={removeOptionSet}>
+                  삭제
+                </button>
+                {el}
+              </li>
             ))}
           </ul>
         </div>
