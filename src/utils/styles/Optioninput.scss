@@ -1,0 +1,20 @@
+.option-item {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+
+  .default-option-input {
+    border-radius: 3px;
+    border: 2px solid #d3d3d3;
+    width: 60%;
+    height: 100%;
+    margin-left: auto;
+  }
+}
+
+.default-option {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-left: 15px;
+}

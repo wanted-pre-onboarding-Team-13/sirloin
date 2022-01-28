@@ -1,0 +1,80 @@
+$border-color: #d3d3d3;
+.info-card {
+  border: 2px solid $border-color;
+  border-radius: 3px;
+  background-color: #fff;
+  padding: 30px;
+  > p {
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+
+    button {
+      right: 0;
+      top: -2px;
+    }
+  }
+  .delete-infocard {
+    border-radius: 3px;
+    border: 2px solid $border-color;
+    background-color: transparent;
+    font-weight: inherit;
+    width: 50px;
+    height: 30px;
+    position: absolute;
+  }
+
+  .info-option {
+    margin-top: 20px;
+    // padding: 10px;
+  }
+
+  .add-option-btn {
+    border: 2px solid $border-color;
+    background-color: transparent;
+    color: #00008b;
+    font-weight: bold;
+    cursor: pointer;
+    height: 35px;
+    width: 120px;
+  }
+}
+
+.option-item {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+  .sub-item-title {
+    border-radius: 3px;
+    border: 2px solid #d3d3d3;
+    width: 30%;
+    height: 100%;
+  }
+
+  .sub-item-input {
+    height: 40px;
+    margin-left: auto;
+    padding-left: 10px;
+    width: 60%;
+
+    display: flex;
+    input {
+      border-radius: 3px;
+      border: 2px solid #d3d3d3;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .sub-item-delete {
+    border-radius: 3px;
+    border: 2px solid $border-color;
+    background-color: transparent;
+    font-weight: inherit;
+    width: 50px;
+    height: 40px;
+    margin-left: 10px;
+  }
+}
