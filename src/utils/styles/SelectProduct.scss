@@ -5,6 +5,7 @@
   padding: 15px 10px;
   border-radius: 5px;
   border: 1px solid #dcdcdc;
+  font-size: 13px;
   &-header {
     display: flex;
     justify-content: end;
@@ -31,25 +32,16 @@
     align-items: center;
     margin: 20px 0;
 
-    .nomal-price-input {
-      margin-right: 10px;
-      padding: 10px 10px;
-    }
     .discount {
-      font-size: 14px;
-    }
-
-    .discountzero {
-      display: none;
+      width: 38px;
     }
 
     .price-input {
-      margin-left: 10px;
+      width: 10vw;
+      margin-right: 10px;
       padding: 10px 10px;
     }
-    #inventory-input {
-      padding: 10px 10px;
-    }
+
     #option-selection {
       width: 100px;
       padding: 10px 10px;

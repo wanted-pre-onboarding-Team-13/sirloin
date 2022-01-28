@@ -13,7 +13,7 @@ const SelectProduct = () => {
     const number = price.replaceAll(',', '');
     const sellingnumber = sellingPrice.replaceAll(',', '');
     const discount = 100 - (sellingnumber / number) * 100;
-    return isNaN(Number(discount)) ? 0 : Math.floor(discount);
+    return isNaN(Number(discount)) || discount === 0 ? '' : Math.floor(discount);
   };
 
   const sellingPriceHandler = (e) => {
@@ -47,7 +47,7 @@ const SelectProduct = () => {
         <div className='input-form-container'>
           <div>
             <input
-              className='nomal-price-input'
+              className='price-input'
               type='text'
               ref={changefocus}
               value={price}
@@ -56,19 +56,20 @@ const SelectProduct = () => {
             />
             원
           </div>
-          <div className={discountPercent() === 0 ? 'discountzero' : 'discount'}>
-            {discountPercent()}%
+          <div className='discount'>{discountPercent()}%</div>
+          <div>
+            <input
+              className='price-input'
+              type='text'
+              value={sellingPrice}
+              placeholder='상품 판매가(필수)'
+              onChange={(e) => sellingPriceHandler(inputPriceFormat(e.target.value))}
+            />
+            원
           </div>
-          <input
-            className='price-input'
-            type='text'
-            value={sellingPrice}
-            id='selling-price'
-            placeholder='상품 판매가(필수)'
-            onChange={(e) => sellingPriceHandler(inputPriceFormat(e.target.value))}
-          />
-          원
-          <input type='text' name='' id='inventory-input' placeholder='재고(필수)' />개
+          <div>
+            <input className='price-input' type='text' name='' placeholder='재고(필수)' />개
+          </div>
           <select name='' id='option-selection'>
             <option value='비과세'>비과세</option>
             <option value='과세'>과세</option>
