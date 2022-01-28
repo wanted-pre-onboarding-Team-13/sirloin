@@ -1,0 +1,125 @@
+$defaultinfo-border: 1px solid #4545453a;
+$defaultinfo-title-background: #fbfbfb;
+
+.defaultinfo-wrapper {
+  margin: 20px auto;
+  border: $defaultinfo-border;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr 1.5fr;
+  grid-template-areas:
+    'title title title title'
+    'category-title category-content category-content category-content'
+    'filter-tag-title filter-tag-content filter-tag-content filter-tag-content'
+    'product-name-title product-name-content product-code-title product-code-content'
+    'product-detail-title product-detail-content product-detail-content product-detail-content'
+    'product-thumbnail-title product-thumbnail-content product-thumbnail-content product-thumbnail-content'
+    'product-image-title product-image-content product-image-content product-image-content'
+    'product-total-stock-title product-total-stock-content product-total-stock-content product-total-stock-content';
+  > div:not(:nth-last-child(-n + 2)) {
+    border-bottom: $defaultinfo-border;
+  }
+  > div:nth-child(even) {
+    border-right: $defaultinfo-border;
+  }
+  input {
+    padding: 12px 10px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #dcdcdc;
+  }
+}
+
+.title {
+  grid-area: title;
+  font-weight: bold;
+  padding: 10px 20px;
+  width: 100%;
+}
+
+.category-title {
+  grid-area: category-title;
+  padding: 20px;
+  background-color: $defaultinfo-title-background;
+}
+
+.category-content {
+  grid-area: category-content;
+  display: flex;
+  flex-direction: row;
+}
+
+.filter-tag-title {
+  grid-area: filter-tag-title;
+  padding: 20px;
+  background-color: $defaultinfo-title-background;
+}
+
+.filter-tag-content {
+  grid-area: filter-tag-content;
+  padding: 10px 20px;
+}
+
+.product-name-title {
+  grid-area: product-name-title;
+  padding: 20px;
+  background-color: $defaultinfo-title-background;
+}
+
+.product-name-content {
+  grid-area: product-name-content;
+  border-right: $defaultinfo-border;
+  padding: 10px 20px;
+}
+
+.product-code-title {
+  grid-area: product-code-title;
+  padding: 20px;
+  background-color: $defaultinfo-title-background;
+}
+
+.product-code-content {
+  grid-area: product-code-content;
+  padding: 20px;
+}
+
+.product-detail-title {
+  grid-area: product-detail-title;
+  padding: 20px;
+  background-color: $defaultinfo-title-background;
+}
+
+.product-detail-content {
+  grid-area: product-detail-content;
+  padding: 10px 20px;
+}
+
+.product-thumbnail-title {
+  grid-area: product-thumbnail-title;
+  padding: 20px;
+  background-color: $defaultinfo-title-background;
+}
+
+.product-thumbnail-content {
+  grid-area: product-thumbnail-content;
+}
+
+.product-image-title {
+  grid-area: product-image-title;
+  padding: 20px;
+  background-color: $defaultinfo-title-background;
+}
+
+.product-image-content {
+  grid-area: product-image-content;
+}
+
+.product-total-stock-title {
+  grid-area: product-total-stock-title;
+  padding: 20px;
+  background-color: $defaultinfo-title-background;
+}
+
+.product-total-stock-content {
+  grid-area: product-total-stock-content;
+  padding: 20px;
+}

@@ -9,6 +9,7 @@ import 'utils/styles/Main.scss';
 
 import ProductBenefit from 'components/ProductBenefit';
 import EtcSetting from 'components/EtcSetting';
+import ProductDefaultInfo from 'components/ProductDefaultInfo/ProductDefaultInfo';
 
 function Main() {
   return (
@@ -29,6 +30,7 @@ function Main() {
       </div>
       <div className='sirloin-form'>
         <Durationconfig />
+        <ProductDefaultInfo />
         <PartThree />
         <ProductBenefit />
         <ImageUpload title='상품 소개' />

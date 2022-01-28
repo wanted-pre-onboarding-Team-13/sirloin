@@ -50,9 +50,20 @@ $default-padding: 10px;
       height: 300px;
       border: 1px solid black;
     }
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 3.5px;
+      background-color: #848688;
+      padding: 10px;
+
+      &:hover {
+        background-color: #464747;
+      }
+    }
   }
 }
-
 .save-container {
   width: 100%;
   display: flex;
