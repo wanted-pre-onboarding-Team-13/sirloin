@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { FiPlus } from 'react-icons/fi';
 
-import '../AdditionalContainer/AdditionalProduct.scss';
 import AdditionalProduct from '../AdditionalContainer/AdditionalProduct';
+import 'utils/styles/AdditionalProduct.scss';
 
 const SelectProduct = () => {
   return (

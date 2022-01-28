@@ -25,6 +25,7 @@ function Main() {
       <div className='sirloin-form'>
         <Durationconfig />
         <PartThree /> <div className='test'></div>
+
       </div>
     </div>
   );
