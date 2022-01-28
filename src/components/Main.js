@@ -4,7 +4,7 @@ import Menulist from './Menulist';
 import Durationconfig from './Durationconfig';
 import 'utils/styles/Main.scss';
 import PartThree from './PartThree/PartThree';
-import DeliveryDeparture from './DeliveryDeparture';
+import DeliverySetting from 'components/DeliverySetting';
 
 function Main() {
   return (
@@ -25,8 +25,8 @@ function Main() {
       </div>
       <div className='sirloin-form'>
         <PartThree />
-        <DeliveryDeparture />
         <div className='test'></div>
+        <DeliverySetting />
         <div className='test'></div>
         <div className='test'></div>
       </div>
