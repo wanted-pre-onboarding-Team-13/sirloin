@@ -1,32 +1,41 @@
 import React from 'react';
-
-import Menulist from './Menulist';
-import Durationconfig from './Durationconfig';
+import ImageUpload from 'components/ImageUpload';
+import Menulist from 'components/Menulist';
+import Durationconfig from 'components/Durationconfig';
+import PartThree from 'components/PartThree/PartThree';
+import Productinfo from 'components/Productinfo';
+import DeliverySetting from 'components/DeliverySetting';
 import 'utils/styles/Main.scss';
-import PartThree from './PartThree/PartThree';
+
+import ProductBenefit from 'components/ProductBenefit';
+import EtcSetting from 'components/EtcSetting';
 
 function Main() {
   return (
-    <div className="main-layout">
-      <div className="sirloin-logo">
+    <div className='main-layout'>
+      <div className='sirloin-logo'>
         <span>
-          <img src="https://www.sirloin.co.kr/data/skin/front/sirloin_2_6_0v/img/sirloin/logo.png"></img>
+          <img src='https://www.sirloin.co.kr/data/skin/front/sirloin_2_6_0v/img/sirloin/logo.png' alt='서로인 로고'></img>
         </span>
       </div>
-      <div className="sirloin-menu ">
+      <div className='sirloin-menu '>
         <Menulist />
       </div>
-      <div className="sirloin-save">
-        <div className="save-container">
+      <div className='sirloin-save'>
+        <div className='save-container'>
           <span>상품 등록</span>
-          <button className="btn-save">저장하기</button>
+          <button className='btn-save'>저장하기</button>
         </div>
       </div>
-      <div className="sirloin-form">
+      <div className='sirloin-form'>
+        <Durationconfig />
         <PartThree />
-        <div className="test"></div>
-        <div className="test"></div>
-        <div className="test"></div>
+        <ProductBenefit />
+        <ImageUpload title='상품 소개' />
+        <ImageUpload title='구매자 추천' />
+        <EtcSetting />
+        <Productinfo />
+        <DeliverySetting />
       </div>
     </div>
   );

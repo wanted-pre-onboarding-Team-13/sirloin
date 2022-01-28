@@ -1,0 +1,44 @@
+$border: 1px solid lightgray;
+$padding-side: 8px;
+
+* {
+  box-sizing: border-box;
+}
+
+.delivery-setting-container {
+  border: $border;
+}
+
+.delivery-setting-title {
+  font-weight: bold;
+  font-size: 18px;
+  border-bottom: $border;
+  padding: $padding-side 10px $padding-side;
+}
+
+.delivery-setting {
+  display: grid;
+  grid-template-columns: 1fr 7fr;
+  grid-template-rows: 1fr 1fr;
+
+  .delivery-title {
+    max-width: 120px;
+    padding: 15px $padding-side;
+    background-color: rgba(245, 240, 240);
+    line-height: 20px;
+  }
+  .delivery-title:nth-child(-n + 4),
+  .delivery-toggle {
+    border-bottom: $border;
+  }
+  .delivery-title:nth-child(-n + 5) {
+    border-right: $border;
+  }
+
+  .delivery-toggle {
+    padding: 15px;
+  }
+  .preorder-container {
+    padding-top: $padding-side;
+  }
+}
