@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
-
 import ItemOptionLayout from './components/ItemOptionLayout.js';
+
 import 'utils/styles/PartThree.scss';
 import 'utils/styles/ItemOptionLayout.scss';
 
@@ -19,11 +19,11 @@ const PartThree = () => {
   };
   return (
     <>
-      <section className="part-three">
-        <div className="item-container">
-          <div className="container-header">
+      <section className='part-three'>
+        <div className='item-container'>
+          <div className='container-header'>
             <h2>상품 옵션*</h2>
-            <button className="add-option-btn" onClick={addOptionSet}>
+            <button className='add-option-btn' onClick={addOptionSet}>
               + 옵션 세트 추가
             </button>
           </div>
