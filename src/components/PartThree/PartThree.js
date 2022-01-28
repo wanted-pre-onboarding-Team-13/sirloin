@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 
+import ItemLayout from './components/ItemOptionLayout.js';
 import 'utils/styles/PartThree.scss';
 import 'utils/styles/ItemOptionLayout.scss';
-import ItemLayout from './components/ItemOptionLayout.js';
 
 const PartThree = () => {
   const [layoutInventory, setLayoutInventory] = useState([]);
