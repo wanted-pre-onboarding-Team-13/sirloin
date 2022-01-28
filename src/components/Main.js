@@ -7,15 +7,15 @@ import Productinfo from 'components/Productinfo';
 import DeliverySetting from 'components/DeliverySetting';
 import 'utils/styles/Main.scss';
 
-import ProductBenefit from './ProductBenefit';
-import EtcSetting from './EtcSetting';
+import ProductBenefit from 'components/ProductBenefit';
+import EtcSetting from 'components/EtcSetting';
 
 function Main() {
   return (
     <div className='main-layout'>
       <div className='sirloin-logo'>
         <span>
-          <img src='https://www.sirloin.co.kr/data/skin/front/sirloin_2_6_0v/img/sirloin/logo.png'></img>
+          <img src='https://www.sirloin.co.kr/data/skin/front/sirloin_2_6_0v/img/sirloin/logo.png' alt='서로인 로고'></img>
         </span>
       </div>
       <div className='sirloin-menu '>

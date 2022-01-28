@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import Infocard from './Productinfo/Infocard';
+import Infocard from 'components/Productinfo/Infocard';
 import { default_productform } from 'utils/constants/productform';
 
 import 'utils/styles/Productinfo.scss';
