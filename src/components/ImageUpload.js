@@ -28,30 +28,22 @@ const ImageUpload = ({ title }) => {
   };
 
   return (
-    <div className="container">
-      <div className="title">
+    <div className='container'>
+      <div className='title'>
         <h2>{title} 이미지</h2>
       </div>
-      <div className="imgAddContainer">
-        <input
-          type="file"
-          style={{ display: 'none' }}
-          onChange={fileSelectedHandler}
-          ref={fileInput}
-        />
-        <button onClick={addImgBtn} className="imageAddBtn">
+      <div className='imgAddContainer'>
+        <input type='file' style={{ display: 'none' }} onChange={fileSelectedHandler} ref={fileInput} />
+        <button onClick={addImgBtn} className='imageAddBtn'>
           +&nbsp;이미지추가
         </button>
-        <div className="imgNameContainer">
+        <div className='imgNameContainer'>
           {selectedFile !== '' &&
             selectedFile.map((name, i) => {
               return (
-                <div key={name} className="imgName">
+                <div key={name} className='imgName'>
                   {name}
-                  <button
-                    className="deleteBtn"
-                    onClick={() => removeImgBtn(name)}
-                  >
+                  <button className='deleteBtn' onClick={() => removeImgBtn(name)}>
                     x
                   </button>
                 </div>
