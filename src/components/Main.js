@@ -1,7 +1,7 @@
 import React from 'react';
-
 import Menulist from './Menulist';
 import Durationconfig from './Durationconfig';
+import ImageUpload from './ImageUpload';
 import 'utils/styles/Main.scss';
 import PartThree from './PartThree/PartThree';
 import DeliverySetting from 'components/DeliverySetting';
@@ -28,6 +28,9 @@ function Main() {
         <div className='test'></div>
         <DeliverySetting />
         <div className='test'></div>
+        <Durationconfig />
+        <ImageUpload title='상품 소개' />
+        <ImageUpload title='구매자 추천' />
         <div className='test'></div>
       </div>
     </div>
