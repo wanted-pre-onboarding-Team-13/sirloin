@@ -3,7 +3,6 @@
   flex-direction: column;
   margin: 20px 0;
   padding: 15px 10px;
-
   border-radius: 5px;
   border: 1px solid #dcdcdc;
   &-header {
@@ -36,6 +35,14 @@
       margin-right: 10px;
       padding: 10px 10px;
     }
+    .discount {
+      font-size: 14px;
+    }
+
+    .discountzero {
+      display: none;
+    }
+
     .price-input {
       margin-left: 10px;
       padding: 10px 10px;
