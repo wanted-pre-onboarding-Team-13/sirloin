@@ -5,12 +5,13 @@ import AdditionalProduct from '../AdditionalContainer/AdditionalProduct';
 import 'utils/styles/AdditionalProduct.scss';
 
 const SelectProduct = () => {
+  const [additLayout, setAdditLayout] = useState(false);
+
+  const additRef = useRef(null);
   return (
     <>
       <div className="select-container">
-        <div className="select-container-header">
-          <button className="delete-btn">삭제</button>
-        </div>
+        <div className="select-container-header"></div>
         <input type="text" id="option-input" placeholder="옵션명을 입력해 주세요.(필수) " />
         <div className="input-form-container">
           <div>
@@ -31,12 +32,13 @@ const SelectProduct = () => {
             </select>
           </div>
         </div>
-        <AdditionalProduct />
+        {additLayout ? <AdditionalProduct additLayout={additLayout} forwardRef={additRef} /> : ''}
+
         <div className="addit-container">
           <button id="addit-option-btn">
             <FiPlus />
           </button>
-          <label htmlFor="addit-option-btn" id="option-btn-label">
+          <label htmlFor="addit-option-btn" id="option-btn-label" onClick={() => setAdditLayout(true)}>
             추가 옵션 상품 추가
           </label>
         </div>

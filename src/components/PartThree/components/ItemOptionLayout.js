@@ -5,14 +5,12 @@ import 'utils/styles/SelectProduct.scss';
 
 const ItemOptionLayout = () => {
   return (
-    <section className='item-layout'>
-      <div className='delete-btn-area'>
-        <button>삭제</button>
-      </div>
-      <div className='item-set-container'>
-        <div className='image-container'>
-          <form method='POST'>
-            <label className='input-image-btn' htmlFor='input-image'>
+    <section className="item-layout">
+      <div className="item-set-container">
+        <div className="image-constainer">
+          <form method="POST">
+            <label className="input-image-btn" htmlFor="input-image">
+
               + 이미지 첨부
             </label>
             <input type='file' id='input-image' accept='image/*' alt='' />
