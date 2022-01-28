@@ -1,43 +1,50 @@
 $border: 1px solid lightgray;
-$padding-side: 8px;
+$padding-side: 10px;
 
 * {
   box-sizing: border-box;
 }
 
-.delivery-setting-container {
+.etc-container {
   border: $border;
 }
 
-.delivery-setting-title {
+.etc-head-title {
   font-weight: bold;
   font-size: 18px;
   border-bottom: $border;
   padding: $padding-side 10px $padding-side;
 }
 
-.delivery-setting {
+.etc {
   display: grid;
   grid-template-columns: 1fr 7fr;
-  grid-template-rows: 1fr 1fr;
-
-  .delivery-title {
+  grid-template-rows: 1fr;
+  .etc-title {
     max-width: 120px;
-    padding: $padding-side;
     background-color: rgba(245, 240, 240);
+    padding: 15px 0 40px $padding-side;
   }
-  .delivery-title:nth-child(-n + 4),
-  .delivery-toggle {
+  .etc-title,
+  .etc-toggle {
     border-bottom: $border;
   }
-  .delivery-title:nth-child(-n + 5) {
+  .etc-title {
     border-right: $border;
+    line-height: 20px;
   }
 
-  .delivery-toggle {
-    padding: 15px;
+  .etc-toggle {
+    padding: 20px;
   }
-  .preorder-container {
+
+  .thank {
     padding-top: $padding-side;
+    p {
+      padding-bottom: $padding-side;
+    }
+    input {
+      width: 300px;
+    }
   }
 }

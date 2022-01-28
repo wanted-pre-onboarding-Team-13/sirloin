@@ -5,6 +5,8 @@ import ImageUpload from './ImageUpload';
 import 'utils/styles/Main.scss';
 import PartThree from './PartThree/PartThree';
 import DeliverySetting from 'components/DeliverySetting';
+import ProductBenefit from './ProductBenefit';
+import EtcSetting from './EtcSetting';
 
 function Main() {
   return (
@@ -28,11 +30,13 @@ function Main() {
         <div className='test'></div>
         <DeliverySetting />
         <div className='test'></div>
+        <ProductBenefit />
         <Durationconfig />
         <PartThree /> <div className='test'></div>
         <ImageUpload title='상품 소개' />
         <ImageUpload title='구매자 추천' />
         <div className='test'></div>
+        <EtcSetting />
       </div>
     </div>
   );
