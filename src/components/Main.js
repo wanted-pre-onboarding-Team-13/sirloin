@@ -1,10 +1,12 @@
 import React from 'react';
-import Menulist from './Menulist';
-import Durationconfig from './Durationconfig';
-import ImageUpload from './ImageUpload';
-import 'utils/styles/Main.scss';
-import PartThree from './PartThree/PartThree';
+import ImageUpload from 'components/ImageUpload';
+import Menulist from 'components/Menulist';
+import Durationconfig from 'components/Durationconfig';
+import PartThree from 'components/PartThree/PartThree';
+import Productinfo from 'components/Productinfo';
 import DeliverySetting from 'components/DeliverySetting';
+import 'utils/styles/Main.scss';
+
 import ProductBenefit from './ProductBenefit';
 import EtcSetting from './EtcSetting';
 
@@ -26,17 +28,14 @@ function Main() {
         </div>
       </div>
       <div className='sirloin-form'>
-        <PartThree />
-        <div className='test'></div>
-        <DeliverySetting />
-        <div className='test'></div>
-        <ProductBenefit />
         <Durationconfig />
-        <PartThree /> <div className='test'></div>
+        <PartThree />
+        <ProductBenefit />
         <ImageUpload title='상품 소개' />
         <ImageUpload title='구매자 추천' />
-        <div className='test'></div>
         <EtcSetting />
+        <Productinfo />
+        <DeliverySetting />
       </div>
     </div>
   );
