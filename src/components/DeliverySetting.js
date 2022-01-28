@@ -20,8 +20,12 @@ function DeliverySetting() {
         </div>
         <div className='delivery-title'>선 주문 예약 배송</div>
         <div className='delivery-toggle preOrder'>
-          <ToggleBtn />
-          <Preorder />
+          <div>
+            <ToggleBtn />
+          </div>
+          <div className='preorder-container'>
+            <Preorder />
+          </div>
         </div>
       </div>
     </div>

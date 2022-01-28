@@ -6,6 +6,10 @@ import PartThree from 'components/PartThree/PartThree';
 import Productinfo from 'components/Productinfo';
 import DeliverySetting from 'components/DeliverySetting';
 import 'utils/styles/Main.scss';
+
+import ProductBenefit from './ProductBenefit';
+import EtcSetting from './EtcSetting';
+
 function Main() {
   return (
     <div className='main-layout'>
@@ -26,12 +30,12 @@ function Main() {
       <div className='sirloin-form'>
         <Durationconfig />
         <PartThree />
-        <DeliverySetting />
-        <PartThree />
+        <ProductBenefit />
         <ImageUpload title='상품 소개' />
         <ImageUpload title='구매자 추천' />
+        <EtcSetting />
         <Productinfo />
-        <div className='test'></div>
+        <DeliverySetting />
       </div>
     </div>
   );

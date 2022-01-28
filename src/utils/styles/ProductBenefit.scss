@@ -1,43 +1,39 @@
 $border: 1px solid lightgray;
-$padding-side: 8px;
+$padding-side: 10px;
 
 * {
   box-sizing: border-box;
 }
 
-.delivery-setting-container {
+.benefit-container {
   border: $border;
 }
 
-.delivery-setting-title {
+.benefit-head-title {
   font-weight: bold;
   font-size: 18px;
   border-bottom: $border;
   padding: $padding-side 10px $padding-side;
 }
 
-.delivery-setting {
+.benefit {
   display: grid;
   grid-template-columns: 1fr 7fr;
-  grid-template-rows: 1fr 1fr;
-
-  .delivery-title {
+  grid-template-rows: 1fr;
+  .benefit-title {
     max-width: 120px;
-    padding: $padding-side;
     background-color: rgba(245, 240, 240);
+    padding: 15px 0 40px $padding-side;
   }
-  .delivery-title:nth-child(-n + 4),
-  .delivery-toggle {
+  .benefit-title,
+  .benefit-toggle {
     border-bottom: $border;
   }
-  .delivery-title:nth-child(-n + 5) {
+  .benefit-title {
     border-right: $border;
   }
 
-  .delivery-toggle {
-    padding: 15px;
-  }
-  .preorder-container {
-    padding-top: $padding-side;
+  .benefit-toggle {
+    padding: 20px;
   }
 }
