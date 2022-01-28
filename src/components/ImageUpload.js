@@ -7,14 +7,19 @@ const ImageUpload = ({ title }) => {
   const fileInput = useRef();
 
   const fileSelectedHandler = (e) => {
-    const fileName = e.target.files[0].name;
-    window.localStorage.setItem(fileName, fileName);
-    const addImg = () => {
-      let imageArr = [...selectedFile];
-      imageArr.unshift(fileName);
-      setSelectedFile(imageArr);
-    };
-    addImg();
+    try {
+      const fileName = e.target.files[0].name;
+      console.log(e.target);
+      window.localStorage.setItem(fileName, fileName);
+      const addImg = () => {
+        let imageArr = [...selectedFile];
+        imageArr.unshift(fileName);
+        setSelectedFile(imageArr);
+      };
+      addImg();
+    } catch (error) {
+      console.log('Do not exist');
+    }
   };
 
   const addImgBtn = (e) => {
