@@ -28,12 +28,14 @@ const PartThree = () => {
             </button>
           </div>
           <ul>
-            {layoutInventory.map((el, index) => (
+            {layoutInventory.map((invenEdifice, index) => (
               <li key={index} id={index} ref={myRef}>
-                <button className="delete-btn" id={index} onClick={removeOptionSet}>
-                  삭제
-                </button>
-                {el}
+                <div className="delete-inven-area">
+                  <button className="delete-btn" id={index} onClick={removeOptionSet}>
+                    삭제
+                  </button>
+                </div>
+                {invenEdifice}
               </li>
             ))}
           </ul>

@@ -4,10 +4,15 @@ import SelectProduct from './SelectContainer/SelectProduct';
 import 'utils/styles/SelectProduct.scss';
 
 const ItemOptionLayout = () => {
+  const [optionInven, setOptionInven] = useState([]);
+
+  const addOptionInven = () => {
+    setOptionInven(optionInven.concat(<SelectProduct />));
+  };
   return (
     <section className="item-layout">
       <div className="item-set-container">
-        <div className="image-constainer">
+        <div className="image-container">
           <form method="POST">
             <label className="input-image-btn" htmlFor="input-image">
               + 이미지 첨부
@@ -15,10 +20,17 @@ const ItemOptionLayout = () => {
             <input type="file" id="input-image" accept="image/*" alt="" />
           </form>
         </div>
-        <SelectProduct />
+        <ul>
+          <SelectProduct />
+          {optionInven.map((el, index) => (
+            <li key={index}>{el}</li>
+          ))}
+        </ul>
         <div>
           <footer>
-            <button className="add-option-btn">&#43;&#32; 옵션 추가</button>
+            <button className="add-option-btn" onClick={addOptionInven}>
+              &#43;&#32; 옵션 추가
+            </button>
           </footer>
         </div>
       </div>
