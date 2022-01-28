@@ -1,5 +1,5 @@
-import React, { useState, useRef } from "react";
-import "utils/styles/ImageUpload.scss";
+import React, { useState, useRef } from 'react';
+import 'utils/styles/ImageUpload.scss';
 
 const ImageUpload = ({ title }) => {
   const [selectedFile, setSelectedFile] = useState([]);
@@ -35,7 +35,7 @@ const ImageUpload = ({ title }) => {
       <div className="imgAddContainer">
         <input
           type="file"
-          style={{ display: "none" }}
+          style={{ display: 'none' }}
           onChange={fileSelectedHandler}
           ref={fileInput}
         />
@@ -43,7 +43,7 @@ const ImageUpload = ({ title }) => {
           +&nbsp;이미지추가
         </button>
         <div className="imgNameContainer">
-          {selectedFile !== "" &&
+          {selectedFile !== '' &&
             selectedFile.map((name, i) => {
               return (
                 <div key={name} className="imgName">

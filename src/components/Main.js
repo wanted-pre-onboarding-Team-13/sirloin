@@ -1,9 +1,8 @@
-import React from "react";
-
-import Menulist from "./Menulist";
-import Durationconfig from "./Durationconfig";
-import "utils/styles/Main.scss";
-import ImageUpload from "./ImageUpload";
+import React from 'react';
+import Menulist from './Menulist';
+import Durationconfig from './Durationconfig';
+import ImageUpload from './ImageUpload';
+import 'utils/styles/Main.scss';
 
 function Main() {
   return (
