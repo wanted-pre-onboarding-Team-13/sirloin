@@ -4,25 +4,30 @@ import Durationconfig from './Durationconfig';
 import ImageUpload from './ImageUpload';
 import 'utils/styles/Main.scss';
 import PartThree from './PartThree/PartThree';
+import DeliverySetting from 'components/DeliverySetting';
 
 function Main() {
   return (
-    <div className="main-layout">
-      <div className="sirloin-logo">
+    <div className='main-layout'>
+      <div className='sirloin-logo'>
         <span>
-          <img src="https://www.sirloin.co.kr/data/skin/front/sirloin_2_6_0v/img/sirloin/logo.png"></img>
+          <img src='https://www.sirloin.co.kr/data/skin/front/sirloin_2_6_0v/img/sirloin/logo.png'></img>
         </span>
       </div>
-      <div className="sirloin-menu ">
+      <div className='sirloin-menu '>
         <Menulist />
       </div>
-      <div className="sirloin-save">
-        <div className="save-container">
+      <div className='sirloin-save'>
+        <div className='save-container'>
           <span>상품 등록</span>
-          <button className="btn-save">저장하기</button>
+          <button className='btn-save'>저장하기</button>
         </div>
       </div>
       <div className='sirloin-form'>
+        <PartThree />
+        <div className='test'></div>
+        <DeliverySetting />
+        <div className='test'></div>
         <Durationconfig />
         <ImageUpload title='상품 소개' />
         <ImageUpload title='구매자 추천' />
