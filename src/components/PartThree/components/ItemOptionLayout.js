@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-import './SelectContainer/SelectProduct.scss';
+import 'utils/styles/SelectProduct.scss';
 import SelectProduct from './SelectContainer/SelectProduct';
 
 const ItemOptionLayout = () => {

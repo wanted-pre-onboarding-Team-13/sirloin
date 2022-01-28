@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { FiPlus } from 'react-icons/fi';
 
-import '../AdditionalContainer/AdditionalProduct.scss';
+import 'utils/styles/AdditionalProduct.scss';
 import AdditionalProduct from '../AdditionalContainer/AdditionalProduct';
 
 const SelectProduct = () => {
