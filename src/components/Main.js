@@ -1,7 +1,7 @@
 import React from 'react';
-
 import Menulist from './Menulist';
 import Durationconfig from './Durationconfig';
+import ImageUpload from './ImageUpload';
 import 'utils/styles/Main.scss';
 import PartThree from './PartThree/PartThree';
 
@@ -22,11 +22,11 @@ function Main() {
           <button className="btn-save">저장하기</button>
         </div>
       </div>
-      <div className="sirloin-form">
-        <PartThree />
-        <div className="test"></div>
-        <div className="test"></div>
-        <div className="test"></div>
+      <div className='sirloin-form'>
+        <Durationconfig />
+        <ImageUpload title='상품 소개' />
+        <ImageUpload title='구매자 추천' />
+        <div className='test'></div>
       </div>
     </div>
   );
