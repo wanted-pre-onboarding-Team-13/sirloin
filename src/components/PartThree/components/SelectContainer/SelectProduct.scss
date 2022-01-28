@@ -1,0 +1,68 @@
+.select-container {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+  padding: 15px 10px;
+
+  border-radius: 5px;
+  border: 1px solid #dcdcdc;
+  &-header {
+    display: flex;
+    justify-content: end;
+    margin-bottom: 15px;
+    .delete-btn {
+      padding: 7px 15px;
+      font-size: 12px;
+      color: red;
+      border-radius: 3px;
+      border: 1px solid red;
+      background-color: #fff;
+      cursor: pointer;
+    }
+  }
+  #option-input {
+    padding: 12px 10px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #dcdcdc;
+  }
+  .input-form-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+
+    .nomal-price-input {
+      margin-right: 10px;
+      padding: 10px 10px;
+    }
+    .price-input {
+      margin-left: 10px;
+      padding: 10px 10px;
+    }
+    #inventory-input {
+      padding: 10px 10px;
+    }
+    #option-selection {
+      width: 100px;
+      padding: 10px 10px;
+    }
+  }
+  .addit-container {
+    margin-top: 20px;
+    #addit-option-btn {
+      margin-right: 10px;
+      padding: 5px 5px;
+      width: 30px;
+      border-radius: 5px;
+      border: 1px solid #dcdcdc;
+      background-color: #fff;
+      cursor: pointer;
+    }
+    #option-btn-label {
+      font-size: 15px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+  }
+}
