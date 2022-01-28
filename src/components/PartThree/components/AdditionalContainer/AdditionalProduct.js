@@ -1,8 +1,13 @@
-import React, { Component } from 'react';
+import React, { Component, useRef, useState } from 'react';
 
 import { FiCornerDownRight } from 'react-icons/fi';
 
-const AdditionalProduct = () => {
+const AdditionalProduct = (additRef) => {
+  const [deleteAddit, setDeleteAddit] = useState(false);
+  console.log(additRef.additLayout);
+  const box = () => {
+    return additRef.additLayout === false;
+  };
   return (
     <>
       <div className="addit-product">
@@ -11,7 +16,9 @@ const AdditionalProduct = () => {
           <input className="input-addit-name" type="text" placeholder="추가 옵션명(필수)" />
           <input className="input-addit-name" type="text" placeholder="추가 옵션 정상가(필수)" /> 원
         </div>
-        <button className="addit-delete-btn">삭제</button>
+        <button className="addit-delete-btn" onClick={box}>
+          삭제
+        </button>
       </div>
     </>
   );
