@@ -1,19 +1,11 @@
-import React, { useEffect, useState, forwardRef } from 'react';
+import React, { useState, forwardRef } from 'react';
 import DatePicker from 'react-datepicker';
 import { ko } from 'date-fns/esm/locale';
 import 'react-datepicker/dist/react-datepicker.css';
 import 'utils/styles/Calendar.scss';
-function Calendar({ mode, config, setConfig }) {
+function Calendar({ mode }) {
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
-
-  useEffect(() => {
-    setConfig({ ...config, start_date: startDate });
-  }, [startDate]);
-
-  useEffect(() => {
-    setConfig({ ...config, end_date: endDate });
-  }, [endDate]);
 
   return (
     <div className='calendar-wrapper'>

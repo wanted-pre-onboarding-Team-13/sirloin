@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import Calendar from './Calendar';
-function Durationbtn({ durationList, config, setConfig }) {
+function Durationbtn({ durationList }) {
   const [btnChecked, setBtnChecked] = useState(durationList[0]);
 
   const radioBtnHandler = (btnName) => {
     setBtnChecked(btnName);
-    setConfig({ ...config, option: btnName });
   };
   return (
     <>
@@ -19,7 +18,7 @@ function Durationbtn({ durationList, config, setConfig }) {
           );
         })}
       </ul>
-      <Calendar mode='show' config={config} setConfig={setConfig}></Calendar>
+      <Calendar mode='show'></Calendar>
     </>
   );
 }
