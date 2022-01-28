@@ -22,17 +22,11 @@ function Main() {
           <button className="btn-save">저장하기</button>
         </div>
       </div>
-<<<<<<< HEAD
-      <div className='sirloin-form'>
-        <Durationconfig />
-        <div className='test'></div>
-=======
       <div className="sirloin-form">
         <PartThree />
         <div className="test"></div>
         <div className="test"></div>
         <div className="test"></div>
->>>>>>> sirloin/part3
       </div>
     </div>
   );
