@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
-import 'utils/styles/ImageUpload.scss';
+import 'utils/styles/ImageUploadModule.scss';
 
-const ImageUpload = ({ title }) => {
+function ImageUploadModule({ ImgButtonName }) {
   const [selectedFile, setSelectedFile] = useState([]);
 
   const fileInput = useRef();
@@ -36,31 +36,26 @@ const ImageUpload = ({ title }) => {
   };
 
   return (
-    <div className='container'>
-      <div className='title'>
-        <h2>{title} 이미지</h2>
-      </div>
-      <div className='imgAddContainer'>
-        <input type='file' style={{ display: 'none' }} onChange={fileSelectedHandler} ref={fileInput} />
-        <button onClick={addImgBtn} className='imageAddBtn'>
-          +&nbsp;이미지추가
-        </button>
-        <div className='imgNameContainer'>
-          {selectedFile !== '' &&
-            selectedFile.map((name, i) => {
-              return (
-                <div key={name} className='imgName'>
-                  {name}
-                  <button className='deleteBtn' onClick={() => removeImgBtn(name)}>
-                    x
-                  </button>
-                </div>
-              );
-            })}
-        </div>
+    <div className='imgAddContainer'>
+      <input type='file' style={{ display: 'none' }} onChange={fileSelectedHandler} ref={fileInput} />
+      <button onClick={addImgBtn} className='imageAddBtn'>
+        +&nbsp;{ImgButtonName}
+      </button>
+      <div className='imgNameContainer'>
+        {selectedFile !== '' &&
+          selectedFile.map((name) => {
+            return (
+              <div key={name} className='imgName'>
+                {name}
+                <button className='deleteBtn' onClick={() => removeImgBtn(name)}>
+                  x
+                </button>
+              </div>
+            );
+          })}
       </div>
     </div>
   );
-};
+}
 
-export default ImageUpload;
+export default ImageUploadModule;
