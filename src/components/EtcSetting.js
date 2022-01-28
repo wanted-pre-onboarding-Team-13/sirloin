@@ -14,10 +14,6 @@ function EtcSetting() {
         </div>
         <div className='etc-toggle'>
           <ToggleBtn />
-          <div className='thank'>
-            <p>감사카드 이름을 입력해주세요</p>
-            <input type='text'></input>
-          </div>
         </div>
       </div>
     </div>

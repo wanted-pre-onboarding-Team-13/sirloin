@@ -1,19 +1,18 @@
 import React, { useEffect, useState } from 'react';
+import DatePicker from 'react-datepicker';
+import { ko } from 'date-fns/esm/locale';
 import Calendar from 'components/Calendar';
 import 'utils/styles/Preorder.scss';
+import 'utils/styles/Calendar.scss';
 
 function Preorder() {
   const [order, setOrder] = useState({ start_date: new Date(), end_date: new Date() });
-  const [midnight, setMidnight] = useState({ start_date: new Date() });
-  const [normal, setNormal] = useState({ start_date: new Date() });
+
+  const [startDate, setStartDate] = useState(new Date());
 
   useEffect(() => {
     console.log(order);
   }, [order]);
-
-  useEffect(() => {
-    console.log(midnight);
-  }, [midnight]);
 
   return (
     <div className='preorder-container'>
@@ -25,12 +24,16 @@ function Preorder() {
       <div className='delivery-option'>
         <div className='title'>
           새벽 배송
-          <Calendar config={midnight} setConfig={setMidnight} />
+          <div className='calendar-wrapper'>
+            <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} dateFormat='yyyy-MM-dd' local={ko} />
+          </div>
         </div>
 
         <div className='title'>
           일반 배송
-          <Calendar config={normal} setConfig={setNormal} />
+          <div className='calendar-wrapper'>
+            <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} dateFormat='yyyy-MM-dd' local={ko} />
+          </div>
         </div>
       </div>
     </div>
