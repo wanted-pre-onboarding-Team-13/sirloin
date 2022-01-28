@@ -5,6 +5,8 @@ import Durationconfig from './Durationconfig';
 import 'utils/styles/Main.scss';
 import PartThree from './PartThree/PartThree';
 import DeliverySetting from 'components/DeliverySetting';
+import ProductBenefit from './ProductBenefit';
+import EtcSetting from './EtcSetting';
 
 function Main() {
   return (
@@ -28,7 +30,9 @@ function Main() {
         <div className='test'></div>
         <DeliverySetting />
         <div className='test'></div>
+        <ProductBenefit />
         <div className='test'></div>
+        <EtcSetting />
       </div>
     </div>
   );
