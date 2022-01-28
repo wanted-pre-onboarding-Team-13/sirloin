@@ -8,7 +8,8 @@ const PartThree = () => {
   const [layoutInventory, setLayoutInventory] = useState([]);
 
   const addOptionSet = () => {
-    setLayoutInventory(layoutInventory + 1);
+    setLayoutInventory(layoutInventory.concat(<ItemLayout key={layoutInventory.length} />));
+    console.log(layoutInventory.length);
   };
   return (
     <>
@@ -20,7 +21,11 @@ const PartThree = () => {
               + 옵션 세트 추가
             </button>
           </div>
-          <ItemLayout />
+          <ul>
+            {layoutInventory.map((el, index) => (
+              <li key={index}>{el}</li>
+            ))}
+          </ul>
         </div>
       </section>
     </>
