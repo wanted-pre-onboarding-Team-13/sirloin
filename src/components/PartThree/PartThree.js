@@ -6,7 +6,6 @@ import 'utils/styles/ItemOptionLayout.scss';
 
 const PartThree = () => {
   const [layoutInventory, setLayoutInventory] = useState([]);
-  const [removeLayout, setRemoveLayout] = useState([]);
 
   const addOptionSet = () => {
     setLayoutInventory(layoutInventory.concat(<ItemOptionLayout key={layoutInventory.length} layoutInventory={layoutInventory} length={layoutInventory.length} />));
