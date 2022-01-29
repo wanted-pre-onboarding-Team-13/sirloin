@@ -40,10 +40,8 @@ function Calendar({ mode }) {
 const Calendarcustom = forwardRef(({ value, onClick }, ref) => {
   return (
     <>
-      <button className='custom-input' onClick={onClick} ref={ref}>
-        {value}
-        <i className='fa-solid fa-angle-down'></i>
-      </button>
+      <input className='custom-input' onClick={onClick} ref={ref} defaultValue={value}></input>
+      <i className='fa-solid fa-angle-down calendar-icon'></i>
     </>
   );
 });
