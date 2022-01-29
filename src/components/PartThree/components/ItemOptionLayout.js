@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 
-import SelectProduct from './SelectContainer/SelectProduct';
+import SelectProduct from 'components/PartThree/components/SelectContainer/SelectProduct';
 import 'utils/styles/SelectProduct.scss';
 
 const ItemOptionLayout = () => {
@@ -29,6 +29,7 @@ const ItemOptionLayout = () => {
           {imageSrc && <img className="onload-image" src={imageSrc} alt="preview-img" />}
           <form method="POST">
             <label className="input-image-btn" htmlFor="input-image">
+
               + 이미지 첨부
             </label>
             <input
