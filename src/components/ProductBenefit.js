@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ToggleBtn from 'components/ToggleBtn';
 import 'utils/styles/ProductBenefit.scss';
 
 function ProductBenefit() {
+  const [on, setOn] = useState(true);
+
   return (
     <div className='benefit-container'>
       <div className='benefit-head-title'>
@@ -11,7 +13,7 @@ function ProductBenefit() {
       <div className='benefit'>
         <div className='benefit-title'>마일리지 적립</div>
         <div className='benefit-toggle'>
-          <ToggleBtn checked='checked' />
+          <ToggleBtn checked='checked' on={on} setOn={setOn} />
         </div>
       </div>
     </div>

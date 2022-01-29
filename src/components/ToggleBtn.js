@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import 'utils/styles/toggleBtn.scss';
 
-function ToggleBtn({ checked }) {
-  const [on, setOn] = useState(false);
-
-  console.log(on);
+function ToggleBtn({ on, setOn }) {
+  const toggleBtn = () => {
+    setOn(!on);
+  };
 
   return (
     <div className='toggle-btn'>
       <label className='label toggle'>
-        <input type='checkbox' className='toggle-input' checked={checked === 'checked' ? true : null} onChange={() => setOn(!on)}></input>
+        <input type='checkbox' className='toggle-input' checked={on} onChange={toggleBtn}></input>
         <div className='toggle-control'></div>
       </label>
     </div>

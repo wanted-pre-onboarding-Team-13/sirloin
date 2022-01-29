@@ -34,11 +34,21 @@ $padding-side: 8px;
   .delivery-title:nth-child(-n + 5) {
     border-right: $border;
   }
+  .delivery-toggle:nth-child(2),
+  .delivery-title:nth-child(1) {
+    border-bottom: none;
+  }
 
   .delivery-toggle {
     padding: 15px;
   }
   .preorder-container {
     padding-top: $padding-side;
+  }
+  .show {
+    display: block;
+  }
+  .hide {
+    display: none;
   }
 }

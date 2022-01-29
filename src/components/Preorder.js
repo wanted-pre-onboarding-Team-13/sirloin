@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, forwardRef } from 'react';
 import DatePicker from 'react-datepicker';
 import { ko } from 'date-fns/esm/locale';
 import Calendar from 'components/Calendar';
@@ -25,14 +25,14 @@ function Preorder() {
         <div className='title'>
           새벽 배송
           <div className='calendar-wrapper'>
-            <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} dateFormat='yyyy-MM-dd' local={ko} />
+            <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} dateFormat='yyyy-MM-dd' local={ko} customInput={<Calendarcustom />} />
           </div>
         </div>
 
         <div className='title'>
           일반 배송
           <div className='calendar-wrapper'>
-            <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} dateFormat='yyyy-MM-dd' local={ko} />
+            <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} dateFormat='yyyy-MM-dd' local={ko} customInput={<Calendarcustom />} />
           </div>
         </div>
       </div>
@@ -40,4 +40,13 @@ function Preorder() {
   );
 }
 
+const Calendarcustom = forwardRef(({ value, onClick }, ref) => {
+  return (
+    <>
+      <button className='custom-input' onClick={onClick} ref={ref}>
+        {value}
+      </button>
+    </>
+  );
+});
 export default Preorder;
