@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 
 import SelectProduct from './SelectContainer/SelectProduct';
 import 'utils/styles/SelectProduct.scss';
@@ -42,7 +42,7 @@ const ItemOptionLayout = () => {
             />
           </form>
         </div>
-        <ul>
+        <ul className="option-container">
           <SelectProduct />
           {optionInven.map((el, index) => (
             <li key={index}>{el}</li>

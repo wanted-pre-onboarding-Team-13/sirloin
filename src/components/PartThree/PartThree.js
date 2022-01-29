@@ -16,6 +16,8 @@ const PartThree = () => {
   const removeOptionSet = (e) => {
     setLayoutInventory(layoutInventory.splice(0, e.target.id));
   };
+
+  console.log(layoutInventory);
   return (
     <>
       <section className="part-three">
@@ -27,16 +29,22 @@ const PartThree = () => {
             </button>
           </div>
           <ul>
-            {layoutInventory.map((invenEdifice, index) => (
-              <li key={index} id={index} ref={myRef}>
-                <div className="delete-inven-area">
-                  <button className="delete-btn" id={index} onClick={removeOptionSet}>
-                    삭제
-                  </button>
-                </div>
-                {invenEdifice}
-              </li>
-            ))}
+            {layoutInventory.length === 0 ? (
+              <div className="inven-empty">
+                <p>옵션세트를 추가하여 옵션을 구성해 주세요.</p>
+              </div>
+            ) : (
+              layoutInventory.map((invenEdifice, index) => (
+                <li key={index} id={index} ref={myRef}>
+                  <div className="delete-inven-area">
+                    <button className="delete-btn" id={index} onClick={removeOptionSet}>
+                      삭제
+                    </button>
+                  </div>
+                  {invenEdifice}
+                </li>
+              ))
+            )}
           </ul>
         </div>
       </section>

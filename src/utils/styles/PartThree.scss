@@ -27,6 +27,20 @@
         cursor: pointer;
       }
     }
+    .inven-empty {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 550px;
+      background-color: transparent;
+      padding-bottom: 200px;
+
+      p {
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+      }
+    }
 
     .delete-inven-area {
       height: 40px;
