@@ -15,7 +15,10 @@ function Main() {
     <div className='main-layout'>
       <div className='sirloin-logo'>
         <span>
-          <img src='https://www.sirloin.co.kr/data/skin/front/sirloin_2_6_0v/img/sirloin/logo.png' alt='서로인 로고'></img>
+          <img
+            src='https://www.sirloin.co.kr/data/skin/front/sirloin_2_6_0v/img/sirloin/logo.png'
+            alt='서로인 로고'
+          ></img>
         </span>
       </div>
       <div className='sirloin-menu '>
@@ -29,8 +32,8 @@ function Main() {
       </div>
       <div className='sirloin-form'>
         <Durationconfig />
-        <PartThree />
         <ProductDefaultInfo />
+        <PartThree />
         <ImageUpload title='상품 소개' />
         <ImageUpload title='구매자 추천' />
         <Productinfo />

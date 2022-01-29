@@ -1,4 +1,4 @@
-import React, { useEffect, useState, forwardRef } from 'react';
+import React, { useState, forwardRef } from 'react';
 import DatePicker from 'react-datepicker';
 import { ko } from 'date-fns/esm/locale';
 import Calendar from 'components/Calendar';
@@ -10,9 +10,6 @@ function Preorder() {
 
   const [startDate, setStartDate] = useState(new Date());
 
-  useEffect(() => {
-    console.log(order);
-  }, [order]);
 
   return (
     <div className='preorder-container'>

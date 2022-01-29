@@ -1,4 +1,4 @@
-import { listOfCategory } from 'utils/constants/ListOfCategory';
+import { listOfCategory } from 'utils/constants/listOfCategory';
 import 'utils/styles/CategoryList.scss';
 
 function CategoryList({ checkHandler, checkedItems }) {
