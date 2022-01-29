@@ -7,7 +7,9 @@ import 'utils/styles/AdditionalProduct.scss';
 const SelectProduct = () => {
   const [additLayout, setAdditLayout] = useState(false);
 
-  const additRef = useRef(null);
+  const additHandle = () => {
+    setAdditLayout(!additLayout);
+  };
   return (
     <>
       <div className="select-container">
@@ -32,7 +34,7 @@ const SelectProduct = () => {
             </select>
           </div>
         </div>
-        {additLayout ? <AdditionalProduct additLayout={additLayout} forwardRef={additRef} /> : ''}
+        {additLayout ? <AdditionalProduct additHandle={additHandle} /> : ''}
 
         <div className="addit-container">
           <button id="addit-option-btn">
