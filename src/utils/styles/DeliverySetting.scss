@@ -23,8 +23,9 @@ $padding-side: 8px;
 
   .delivery-title {
     max-width: 120px;
-    padding: $padding-side;
+    padding: 15px $padding-side;
     background-color: rgba(245, 240, 240);
+    line-height: 20px;
   }
   .delivery-title:nth-child(-n + 4),
   .delivery-toggle {
@@ -33,8 +34,21 @@ $padding-side: 8px;
   .delivery-title:nth-child(-n + 5) {
     border-right: $border;
   }
+  .delivery-toggle:nth-child(2),
+  .delivery-title:nth-child(1) {
+    border-bottom: none;
+  }
 
   .delivery-toggle {
     padding: 15px;
+  }
+  .preorder-container {
+    padding-top: $padding-side;
+  }
+  .show {
+    display: block;
+  }
+  .hide {
+    display: none;
   }
 }

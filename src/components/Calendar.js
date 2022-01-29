@@ -20,6 +20,7 @@ function Calendar({ mode }) {
         onChange={(date) => setStartDate(date)}
         customInput={<Calendarcustom />}
       ></DatePicker>
+
       <span>~</span>
       <DatePicker
         dateFormat='yyyy-MM-dd h:mm'

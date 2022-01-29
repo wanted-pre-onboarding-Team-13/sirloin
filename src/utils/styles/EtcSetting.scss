@@ -1,0 +1,50 @@
+$border: 1px solid lightgray;
+$padding-side: 10px;
+
+* {
+  box-sizing: border-box;
+}
+
+.etc-container {
+  border: $border;
+}
+
+.etc-head-title {
+  font-weight: bold;
+  font-size: 18px;
+  border-bottom: $border;
+  padding: $padding-side 10px $padding-side;
+}
+
+.etc {
+  display: grid;
+  grid-template-columns: 1fr 7fr;
+  grid-template-rows: 1fr;
+  .etc-title {
+    max-width: 120px;
+    background-color: rgba(245, 240, 240);
+    padding: 15px 0 40px $padding-side;
+  }
+  .etc-title,
+  .etc-toggle {
+    border-bottom: $border;
+  }
+  .etc-title {
+    border-right: $border;
+    line-height: 20px;
+  }
+
+  .etc-toggle {
+    padding: 20px;
+  }
+
+  .thank {
+    padding-top: $padding-side;
+    p {
+      padding-bottom: $padding-side;
+    }
+    input {
+      width: 300px;
+    }
+  }
+}

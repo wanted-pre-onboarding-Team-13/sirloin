@@ -4,7 +4,7 @@
 
   .delete-btn-area {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     button {
       margin-bottom: 10px;
       padding: 5px 12px;
@@ -28,8 +28,14 @@
       justify-content: center;
       align-items: center;
       height: 220px;
+      flex-wrap: wrap;
+      overflow: hidden;
       background-color: #f5f5f5;
       border: 1px solid #dcdcdc;
+
+      .onload-image {
+        object-fit: cover;
+      }
 
       .input-image-btn {
         border-radius: 5px;
