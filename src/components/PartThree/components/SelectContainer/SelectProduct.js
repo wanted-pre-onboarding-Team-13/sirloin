@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { FiPlus } from 'react-icons/fi';
 
-import AdditionalProduct from '../AdditionalContainer/AdditionalProduct';
+import AdditionalProduct from 'components/Main/components/AdditionalContainer/AdditionalProduct';
 import 'utils/styles/AdditionalProduct.scss';
 
 const SelectProduct = () => {
@@ -36,8 +36,8 @@ const SelectProduct = () => {
 
     return comma(uncomma(str));
   };
-  
-    const [additLayout, setAdditLayout] = useState(false);
+
+  const [additLayout, setAdditLayout] = useState(false);
 
   const additHandle = () => {
     setAdditLayout(!additLayout);
@@ -82,11 +82,15 @@ const SelectProduct = () => {
 
         {additLayout ? <AdditionalProduct additHandle={additHandle} /> : ''}
 
-        <div className="addit-container">
-          <button id="addit-option-btn">
+        <div className='addit-container'>
+          <button id='addit-option-btn'>
             <FiPlus />
           </button>
-          <label htmlFor="addit-option-btn" id="option-btn-label" onClick={() => setAdditLayout(true)}>
+          <label
+            htmlFor='addit-option-btn'
+            id='option-btn-label'
+            onClick={() => setAdditLayout(true)}
+          >
             추가 옵션 상품 추가
           </label>
         </div>
