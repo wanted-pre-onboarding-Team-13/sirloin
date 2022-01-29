@@ -83,7 +83,11 @@ const SelectProduct = () => {
         {additLayout ? <AdditionalProduct additHandle={additHandle} /> : ''}
 
         <div className='addit-container'>
+<<<<<<< Updated upstream
           <button id='addit-option-btn'>
+=======
+          <button id='addit-option-btn' onClick={() => setAdditLayout(true)}>
+>>>>>>> Stashed changes
             <FiPlus />
           </button>
           <label

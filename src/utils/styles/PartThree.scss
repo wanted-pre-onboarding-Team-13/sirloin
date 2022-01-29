@@ -1,6 +1,6 @@
 .part-three {
   .item-container {
-    background-color: #d3d3d3;
+    background-color: #efefef;
     border: 1px solid #dcdcdc;
     .container-header {
       display: flex;
@@ -12,14 +12,14 @@
       border-bottom: 1px solid #dcdcdc;
       h2 {
         padding-left: 20px;
-        font-size: 14px;
+        font-size: 1.1rem;
         color: #000;
         font-weight: 600;
       }
       .add-option-btn {
         padding: 0 15px;
         height: 100%;
-        border: 1px solid #191970;
+        border: 1px solid #352f6b;
         border-radius: 5px;
         background-color: transparent;
         font-size: 11px;

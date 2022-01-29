@@ -1,5 +1,5 @@
 $defaultinfo-border: 1px solid #4545453a;
-$defaultinfo-title-background: #fbfbfb;
+$defaultinfo-title-background: #efefef;
 
 .defaultinfo-wrapper {
   margin: 20px auto;
@@ -34,6 +34,7 @@ $defaultinfo-title-background: #fbfbfb;
   font-weight: bold;
   padding: 10px 20px;
   width: 100%;
+  font-size: 1.1rem;
 }
 
 .category-title {

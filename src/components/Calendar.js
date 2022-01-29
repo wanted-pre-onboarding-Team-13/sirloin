@@ -3,12 +3,12 @@ import DatePicker from 'react-datepicker';
 import { ko } from 'date-fns/esm/locale';
 import 'react-datepicker/dist/react-datepicker.css';
 import 'utils/styles/Calendar.scss';
-function Calendar({ mode }) {
+function Calendar({ mode, marginStyle }) {
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
 
   return (
-    <div className='calendar-wrapper'>
+    <div className={marginStyle ? 'time-calendar-wrapper' : 'calendar-wrapper'}>
       <DatePicker
         dateFormat={mode === 'show' ? 'yyyy-MM-dd h:mm' : 'yyyy-MM-dd'}
         showTimeSelect={mode === 'show' && true}

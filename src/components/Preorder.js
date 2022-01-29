@@ -10,26 +10,37 @@ function Preorder() {
 
   const [startDate, setStartDate] = useState(new Date());
 
-
   return (
     <div className='preorder-container'>
       <div className='time title'>
         주문 시간
-        <Calendar mode='show' config={order} setConfig={setOrder} />
+        <Calendar mode='show' marginStyle='true' config={order} setConfig={setOrder} />
       </div>
 
       <div className='delivery-option'>
         <div className='title'>
           새벽 배송
           <div className='calendar-wrapper'>
-            <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} dateFormat='yyyy-MM-dd' local={ko} customInput={<Calendarcustom />} />
+            <DatePicker
+              selected={startDate}
+              onChange={(date) => setStartDate(date)}
+              dateFormat='yyyy-MM-dd'
+              local={ko}
+              customInput={<Calendarcustom />}
+            />
           </div>
         </div>
 
         <div className='title'>
           일반 배송
           <div className='calendar-wrapper'>
-            <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} dateFormat='yyyy-MM-dd' local={ko} customInput={<Calendarcustom />} />
+            <DatePicker
+              selected={startDate}
+              onChange={(date) => setStartDate(date)}
+              dateFormat='yyyy-MM-dd'
+              local={ko}
+              customInput={<Calendarcustom />}
+            />
           </div>
         </div>
       </div>
