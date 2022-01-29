@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 
 import SelectProduct from 'components/PartThree/components/SelectContainer/SelectProduct';
 import 'utils/styles/SelectProduct.scss';
@@ -23,27 +23,26 @@ const ItemOptionLayout = () => {
   };
 
   return (
-    <section className="item-layout">
-      <div className="item-set-container">
-        <div className="image-container">
-          {imageSrc && <img className="onload-image" src={imageSrc} alt="preview-img" />}
-          <form method="POST">
-            <label className="input-image-btn" htmlFor="input-image">
-
+    <section className='item-layout'>
+      <div className='item-set-container'>
+        <div className='image-container'>
+          {imageSrc && <img className='onload-image' src={imageSrc} alt='preview-img' />}
+          <form method='POST'>
+            <label className='input-image-btn' htmlFor='input-image'>
               + 이미지 첨부
             </label>
             <input
-              type="file"
-              id="input-image"
-              accept="image/*"
-              alt=""
+              type='file'
+              id='input-image'
+              accept='image/*'
+              alt=''
               onChange={(e) => {
                 encodeFileToBase64(e.target.files[0]);
               }}
             />
           </form>
         </div>
-        <ul className="option-container">
+        <ul className='option-container'>
           <SelectProduct />
           {optionInven.map((el, index) => (
             <li key={index}>{el}</li>
@@ -51,7 +50,7 @@ const ItemOptionLayout = () => {
         </ul>
         <div>
           <footer>
-            <button className="add-option-btn" onClick={addOptionInven}>
+            <button className='add-option-btn' onClick={addOptionInven}>
               &#43;&#32; 옵션 추가
             </button>
           </footer>
