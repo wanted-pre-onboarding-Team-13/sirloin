@@ -30,7 +30,7 @@
       height: 220px;
       flex-wrap: wrap;
       overflow: hidden;
-      background-color: #f5f5f5;
+      background-color: #efefef;
       border: 1px solid #dcdcdc;
 
       .onload-image {
@@ -44,7 +44,7 @@
         font-weight: 600;
         letter-spacing: 0.1em;
         background-color: transparent;
-        border: 1px solid #00008b;
+        border: 1px solid #352f6b;
         cursor: pointer;
       }
       input {
@@ -60,7 +60,7 @@
         color: #000;
         font-weight: 600;
         background-color: #fff;
-        border: 1px solid #00008b;
+        border: 1px solid #352f6b;
         cursor: pointer;
       }
     }

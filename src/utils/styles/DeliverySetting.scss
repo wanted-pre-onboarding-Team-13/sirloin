@@ -11,7 +11,7 @@ $padding-side: 8px;
 
 .delivery-setting-title {
   font-weight: bold;
-  font-size: 18px;
+  font-size: 1.1rem;
   border-bottom: $border;
   padding: $padding-side 10px $padding-side;
 }
@@ -24,7 +24,7 @@ $padding-side: 8px;
   .delivery-title {
     max-width: 120px;
     padding: 15px $padding-side;
-    background-color: rgba(245, 240, 240);
+    background-color: #efefef;
     line-height: 20px;
   }
   .delivery-title:nth-child(-n + 4),
@@ -50,5 +50,8 @@ $padding-side: 8px;
   }
   .hide {
     display: none;
+  }
+  .border-top {
+    border-top: $border;
   }
 }

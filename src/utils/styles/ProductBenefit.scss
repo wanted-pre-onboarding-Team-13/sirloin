@@ -6,6 +6,7 @@ $padding-side: 10px;
 }
 
 .benefit-container {
+  margin-top: 20px;
   border: $border;
 }
 
@@ -22,7 +23,7 @@ $padding-side: 10px;
   grid-template-rows: 1fr;
   .benefit-title {
     max-width: 120px;
-    background-color: rgba(245, 240, 240);
+    background-color: #efefef;
     padding: 15px 0 40px $padding-side;
   }
   .benefit-title,

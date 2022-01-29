@@ -12,6 +12,7 @@ $outerBorder: 2px solid lightgray;
   @include font-bold();
   padding: 15px;
   border-bottom: $innerBorder;
+  font-size: 1.1rem;
 }
 .duration-config {
   display: grid;
@@ -19,7 +20,7 @@ $outerBorder: 2px solid lightgray;
   grid-template-rows: 1fr 1fr;
 
   .duration-title {
-    background-color: rgb(245, 240, 240);
+    background-color: #efefef;
     padding: 10px;
     font-weight: 400;
     border-right: $innerBorder;
@@ -50,10 +51,11 @@ input[type='radio'] {
   height: 20px;
   border-radius: 50%;
   outline: none;
-  border: 1px solid #322a77;
+  border: 1px solid #352f6b;
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
   &:before {
     content: '';
     display: block;
@@ -62,6 +64,6 @@ input[type='radio'] {
     border-radius: 50%;
   }
   &:checked:before {
-    background-color: #322a77;
+    background-color: #352f6b;
   }
 }

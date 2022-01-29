@@ -83,7 +83,7 @@ const SelectProduct = () => {
         {additLayout ? <AdditionalProduct additHandle={additHandle} /> : ''}
 
         <div className='addit-container'>
-          <button id='addit-option-btn'>
+          <button id='addit-option-btn' onClick={() => setAdditLayout(true)}>
             <FiPlus />
           </button>
           <label

@@ -7,7 +7,7 @@ function Durationconfig() {
   return (
     <div className='duration-config-container'>
       <div className='duration-config-title'>
-        <p>노출 및 판매기간 설정</p>
+        <h2>노출 및 판매기간 설정</h2>
       </div>
       <div className='duration-config'>
         <div className='duration-title display'>상품 노출 기한</div>
