@@ -1,7 +1,9 @@
 <h1 align= "center"> 설로인 관리자 상품등록 페이지 구현 과제</h1>
 
 ### :house: 배포 URL
+http://team13-pre-onboarding-sirloin.s3-website.ap-northeast-2.amazonaws.com/
 
+![캡처](https://user-images.githubusercontent.com/65812122/151647077-90850869-809d-4be5-9041-4dc3f4d63a8f.PNG)
 ### :exclamation: 설치방법
 ~~~
 1. npm install
