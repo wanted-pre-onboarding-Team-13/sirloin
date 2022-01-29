@@ -3,10 +3,11 @@
 ### :house: 배포 URL
 http://team13-pre-onboarding-sirloin.s3-website.ap-northeast-2.amazonaws.com/
 
-![캡처](https://user-images.githubusercontent.com/65812122/151647077-90850869-809d-4be5-9041-4dc3f4d63a8f.PNG)
+![캡쳐](https://user-images.githubusercontent.com/85682854/151652365-2d309084-b9ad-492e-94a0-1ae744748efb.png)
 ### :exclamation: 설치방법
 ~~~
 1. npm install
+
 2. npm start
 ~~~
 
