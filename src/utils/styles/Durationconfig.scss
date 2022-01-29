@@ -38,3 +38,30 @@ $outerBorder: 2px solid lightgray;
     border-bottom: $innerBorder;
   }
 }
+
+.duration-config-item {
+  display: flex;
+  align-items: center;
+}
+input[type='radio'] {
+  appearance: none;
+  background-color: #ffffff;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  outline: none;
+  border: 1px solid #322a77;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:before {
+    content: '';
+    display: block;
+    width: 70%;
+    height: 70%;
+    border-radius: 50%;
+  }
+  &:checked:before {
+    background-color: #322a77;
+  }
+}

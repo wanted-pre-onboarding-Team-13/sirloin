@@ -5,11 +5,10 @@ import Durationconfig from 'components/Durationconfig';
 import PartThree from 'components/PartThree/PartThree';
 import Productinfo from 'components/Productinfo';
 import DeliverySetting from 'components/DeliverySetting';
-import 'utils/styles/Main.scss';
-
 import ProductBenefit from 'components/ProductBenefit';
 import EtcSetting from 'components/EtcSetting';
 import ProductDefaultInfo from 'components/ProductDefaultInfo/ProductDefaultInfo';
+import 'utils/styles/Main.scss';
 
 function Main() {
   return (
@@ -30,14 +29,14 @@ function Main() {
       </div>
       <div className='sirloin-form'>
         <Durationconfig />
-        <ProductDefaultInfo />
         <PartThree />
-        <ProductBenefit />
+        <ProductDefaultInfo />
         <ImageUpload title='상품 소개' />
         <ImageUpload title='구매자 추천' />
-        <EtcSetting />
         <Productinfo />
         <DeliverySetting />
+        <ProductBenefit />
+        <EtcSetting />
       </div>
     </div>
   );
