@@ -8,7 +8,15 @@ const PartThree = () => {
   const [layoutInventory, setLayoutInventory] = useState([]);
 
   const addOptionSet = () => {
-    setLayoutInventory(layoutInventory.concat(<ItemOptionLayout key={layoutInventory.length} layoutInventory={layoutInventory} length={layoutInventory.length} />));
+    setLayoutInventory(
+      layoutInventory.concat(
+        <ItemOptionLayout
+          key={layoutInventory.length}
+          layoutInventory={layoutInventory}
+          length={layoutInventory.length}
+        />
+      )
+    );
   };
 
   const myRef = useRef(null);
@@ -17,7 +25,6 @@ const PartThree = () => {
     setLayoutInventory(layoutInventory.splice(0, e.target.id));
   };
 
-  console.log(layoutInventory);
   return (
     <>
       <section className='part-three'>
@@ -30,14 +37,14 @@ const PartThree = () => {
           </div>
           <ul>
             {layoutInventory.length === 0 ? (
-              <div className="inven-empty">
+              <div className='inven-empty'>
                 <p>옵션세트를 추가하여 옵션을 구성해 주세요.</p>
               </div>
             ) : (
               layoutInventory.map((invenEdifice, index) => (
                 <li key={index} id={index} ref={myRef}>
-                  <div className="delete-inven-area">
-                    <button className="delete-btn" id={index} onClick={removeOptionSet}>
+                  <div className='delete-inven-area'>
+                    <button className='delete-btn' id={index} onClick={removeOptionSet}>
                       삭제
                     </button>
                   </div>
